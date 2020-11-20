@@ -1,0 +1,24 @@
+{
+  "name": "cnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/motao314/CNode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/motao314/CNode/issues"
+  },
+  "homepage": "https://github.com/motao314/CNode#readme",
+  "dependencies": {
+    "koa": "^2.13.0",
+    "koa-router": "^10.0.0"
+  }
+}
