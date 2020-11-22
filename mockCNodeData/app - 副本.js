@@ -78,10 +78,10 @@ const replies = [
 for(let i = 0; i < 50; i++){
     let newData = rootData.map((item,index)=>{
         item = {...item};
-        item.title += `复制（${1}）`;
+        item.title += `复制（${i}）`;
         item.top = false;
         item.good = (Math.random()-0.7) > 0?true:false;
-        item.id += "0"+1+index;
+        item.id += "0"+i+index;
         item.author = users[Math.floor(Math.random()*users.length)];
         return item;
     });
