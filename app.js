@@ -1,4 +1,5 @@
 const koa = require("koa");
+const cors=require('koa2-cors')
 const koaRouter = require("koa-router");
 const app = new koa();
 const router = new koaRouter();
@@ -17,7 +18,8 @@ router.get("/api/topics",ctx=>{
             nowData = [...rootData];
             break;
         case "good":
-            nowData = rootData.filter(item=>item.good);    
+            nowData = rootData.filter(item=>item.good);   
+            break; 
         default:
             nowData = rootData.filter(item=>(item.tab === tab));
     }
@@ -68,5 +70,6 @@ router.get("/api/user/:loginname",ctx=>{
         }
     }
 });
+app.use(cors());
 app.use(router.routes());
 app.listen(8080);
